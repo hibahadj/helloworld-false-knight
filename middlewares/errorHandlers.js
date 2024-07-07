@@ -1,6 +1,6 @@
 //middleware error handlers:
 const notFoundHandler = (req, res, next) => {
-    const error = new Error(`Not Found - ${req.originalUrl}`);
+    const error = new Error(`error 404 | Not Found - ${req.originalUrl}`);
     res.status(404);
     next(error);
   };

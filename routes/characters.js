@@ -25,7 +25,7 @@ router.get('/name/:name', async (req, res, next) => {
   try {
     const character = await Character.findOne({ name: req.params.name });
     if (!character) {
-      return res.status(404).json({ message: 'Character not found' });
+      return res.status(404).json({ message: 'error 404 | Character not found' });
     }
     res.json(character);
   } catch (err) {
@@ -38,7 +38,7 @@ router.get('/email/:email', async (req, res, next) => {
   try {
     const character = await Character.findOne({ email: req.params.email });
     if (!character) {
-      return res.status(404).json({ message: 'Character not found' });
+      return res.status(404).json({ message: 'error 404 | Character not found' });
     }
     res.json(character);
   } catch (err) {
@@ -80,7 +80,7 @@ router.put('/email/:email', async (req, res, next) => {
       { new: true }
     );
     if (!updatedCharacter) {
-      return res.status(404).json({ message: 'Character not found' });
+      return res.status(404).json({ message: 'error 404 | Character not found' });
     }
     res.json(updatedCharacter);
   } catch (err) {

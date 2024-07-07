@@ -26,7 +26,8 @@ Defines the MongoDB schema for game characters including `name`, `class`, `level
 
 Middleware to validate required fields (`name` and `class`) for creating new characters. Validates the `email` format.
 
-### 3. Error Handlers (`errorHandlers.js`)
+### 3. Error Handlers (`errorHandlers.js`) 
+handle 404 Not Found errors and other such as (500 status code).
 
 - #### `notFoundHandler`
 
@@ -38,9 +39,12 @@ Middleware to validate required fields (`name` and `class`) for creating new cha
 
 ### 4. Routes (`characters.js`)
 
-Implements CRUD operations for the game characters:
+CRUD operations for the game characters:
 
-- `GET /api/characters`: list of characters with pagination.
+- `GET /api/characters`: Retrieves a list of characters with pagination.
+Parameters:
+- `page`: Page number for pagination
+- `limit`: Number of items per page
 - `GET /api/characters/name/:name`: get character by name.
 - `GET /api/characters/email/:email`: get character by email.
 - `POST /api/characters`: Creates a new character.

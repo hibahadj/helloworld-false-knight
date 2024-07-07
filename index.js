@@ -16,7 +16,7 @@ app.use(json());
 app.use('/api/characters', characterRoutes);
 
 app.use((req, res, next) => {
-  const error = new Error('Not Found');
+  const error = new Error('error 404 | Not Found');
   error.status = 404;
   next(error);
 });
