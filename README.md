@@ -55,22 +55,13 @@ Sets up the Express server, configures middleware, defines routes using, handles
 
 ## How to Run
 
-1. **Setup**
+1. **Setup & Run**
 
 After downloading MongoDB and node.
    - Clone the repository and navigate into the project directory.
    - Install dependencies using `npm install`.
-   - Create a `.env` file with the following variables:
-     ```
-     PORT=3000
-     MONGODB_URI=mongodb://localhost:27017/false-knight
-     ```
-
-2. **Run**
-
    - Start MongoDB server (`mongod`).
-   - Launch the application with `npm start`.
 
-3. **Testing**
+2. **Testing**
 
    - We can use Postman to test API endpoints (`POST`, `GET`, `PUT`, `DELETE`).
