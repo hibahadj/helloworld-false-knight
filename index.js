@@ -1,17 +1,18 @@
 import express from 'express';
-import { connect, connection } from 'mongoose';
+import mongoose from 'mongoose';
 import morgan from 'morgan';
-import { json } from 'body-parser';
-require('dotenv').config();
+import bodyParser from 'body-parser';
+import 'dotenv/config';
 
-import characterRoutes from './routes/characters';
+import characterRoutes from './routes/characters.js';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 
 app.use(morgan('dev'));
-app.use(json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api/characters', characterRoutes);
 
@@ -27,7 +28,7 @@ app.use((error, req, res, next) => {
     message: error.message,
   });
 });
-
+const { connect, connection } = mongoose;
 // Connect to our database (Mongodb)
 connect(process.env.MONGODB_URI);
 

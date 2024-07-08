@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const router = Router();
-import Character from '../models/character';
+import Character from '../models/character.js';
 
 // GET characters with pagination
 router.get('/', async (req, res, next) => {
