@@ -42,9 +42,7 @@ handle 404 Not Found errors and other such as (500 status code).
 CRUD operations for the game characters:
 
 - `GET /api/characters`: Retrieves a list of characters with pagination.
-Parameters:
-- `page`: Page number for pagination
-- `limit`: Number of items per page
+#### Parameters: page: Page number for pagination & limit: Number of items per page
 - `GET /api/characters/name/:name`: get character by name.
 - `GET /api/characters/email/:email`: get character by email.
 - `POST /api/characters`: Creates a new character.
