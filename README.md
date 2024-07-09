@@ -20,11 +20,11 @@
 
 ### 1. Character Model (`character.js`)
 
-Defines the MongoDB schema for game characters including `name`, `class`, `level`, `email`, and `createdAt`. Validates the email format using a custom validator.
+Defines the MongoDB schema for game characters including `name`, `class`, `level`, `lives`, `blood`, `strength`, `dexterity`, `intelligence`, `defense`, `weapon`, `armor`, `accessories`, `skills`, and `createdAt`.
 
 ### 2. Validators (`validators.js`)
 
-Middleware to validate required fields (`name` and `class`) for creating new characters. Validates the `email` format.
+Middleware to validate required fields (`name` and `class`) for creating new characters.
 
 ### 3. Error Handlers (`errorHandlers.js`) 
 handle 404 Not Found errors and other such as (500 status code).
@@ -44,11 +44,9 @@ CRUD operations for the game characters:
 - `GET /api/characters`: Retrieves a list of characters with pagination.
 #### Parameters: page: Page number for pagination & limit: Number of items per page
 - `GET /api/characters/name/:name`: get character by name.
-- `GET /api/characters/email/:email`: get character by email.
 - `POST /api/characters`: Creates a new character.
 - `PUT /api/characters/:id`: Updates a character by ID.
 - `PUT /api/characters/name/:name`: Updates a character by name.
-- `PUT /api/characters/email/:email`: Updates a character by email.
 - `DELETE /api/characters/:id`: Deletes a character by ID.
 
 ### 5. Main (`index.js`)
